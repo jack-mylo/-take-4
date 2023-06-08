@@ -5,9 +5,7 @@ I have used the versatile 3 - in - 1 sunfounder kit to construct and edge detect
 |:--:|:--:|:--:|:--:|
 | Jack M | Purdue University | Mechanical Engineering | Incoming Junior
 
-**Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
-
-![Headstone Image](logo.svg)
+![Headstone Image](IMG-4802.jpg)
   
 # Potential Challenges
 

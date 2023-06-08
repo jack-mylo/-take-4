@@ -1,83 +1,70 @@
-# Project Name Here
-Replace this text with a brief description (2-3 sentences) of your project. This description should draw the reader in and make them interested in what you've built. You can include what the biggest challenges, takeaways, and triumphs from completing the project were. As you complete your portfolio, remember your audience is less familiar than you are with all that your project entails!
+# Edge Detecting Idle Table Rover
+I have used the versatile 3 - in - 1 sunfounder kit to construct and edge detecting free roam robot. It's fairly simple, using an arduino, two motors, a motor driver, and 2 IR sensors to work. Specifically throughout building this project, the IR sensors were especially annoying.
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
-| FirstName LastInitialOnly | School Name | Electrical Engineering | Incoming Senior
+| Jack M | Purdue University | Mechanical Engineering | Incoming Junior
 
 **Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
 
 ![Headstone Image](logo.svg)
   
-# Final Milestone
-For your final milestone, explain the outcome of your project. Key details to include are:
-- What you've accomplished since your previous milestone
-- What your biggest challenges and triumphs were at BSE
-- A summary of key topics you learned about
-- What you hope to learn in the future after everything you've learned at BSE
+# Potential Challenges
 
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
+1. Assembly
+- The base can appear symmetrical
+- Th stand offs can occasionally be tricky and threading may not be fully there
+- Enure to insert the screws facing the correct direction when attaching the motor to avoid interference with wheels
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+2. Electrical/Sensors
 
-# Second Milestone
-For your second milestone, explain what you've worked on since your previous milestone. You can highlight:
-- Technical details of what you've accomplished and how they contribute to the final goal
-- What has been surprising about the project so far
-- Previous challenges you faced that you overcame
-- What needs to be completed before your final milestone 
+- For motor driver, do not use the 5V output pin and instead power the driver directly from the Vin pin
+- Angle of IR sensors in Sunfounder's given instructions is abysmal for what we are trying to do
+- Messing with the potentiometer built into the IR sensor is necessary
+- Set up the mini breadboard to distribute power to all necessary components
 
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
+3. Code
+- Set up an individual method for stopping, reverse, turning, etc.
+- Tinker with time delays to prevent jerky movement
+- Make sure it turns the correct way depending on which sensor gets triggered
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/y3VAmNlER5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-# First Milestone
-For your first milestone, describe what your project is and how you plan to build it. You can include:
-- An explanation about the different components of your project and how they will all integrate together
-- Technical progress you've made so far
-- Challenges you're facing and solving in your future milestones
-- What your plan is to complete your project
 
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
+# In-kit Mods
+The kit comes with a crazy amount of additional parts and the base project is fairly simple so I expect multiple modifications per student.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CaCazFBhYKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+1. Addition of ultrasonic sensor
+- Adding an Ultrasonic sensor could prevent running into walls
+- Attaching Ultrasonic to servo could allow for fuller view
 
-# Schematics 
-Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
+2. Joystic control
+- Adding the joystick will allow students to actually physicall control the rover
+- Gives students a better understanding of map() function through dual potentiometer
 
-# Code
-Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
+3. Line tracking
+- A new way to get the rover to follow a path
+- Kind of the same thing as IR but still new sensor, new student experience
 
-```c++
-void setup() {
-  // put your setup code here, to run once:
-  Serial.begin(9600);
-  Serial.println("Hello World!");
-}
+4. IOT connection
+- Allows students to get an idea of how to connect an Arduino to wifi through use of the ESP8266
+- Gives an idea of how inputs travel wirelessly
+- Once again same appeal as joystick, controlling your own rover
 
-void loop() {
-  // put your main code here, to run repeatedly:
 
-}
-```
+# Out-of-kit Mods
 
-# Bill of Materials
-Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
-Don't forget to place the link of where to buy each component inside the quotation marks in the corresponding row after href =. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize this to your project needs. 
+1. Better IR sensors
+- Would just make the thing more reliable and easy to use
 
-| **Part** | **Note** | **Price** | **Link** |
-|:--:|:--:|:--:|:--:|
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-|:--:|:--:|:--:|:--:|
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-|:--:|:--:|:--:|:--:|
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-|:--:|:--:|:--:|:--:|
+2. Adafruit LED strip
+- I'm always partial to LEDs and I think specificallt the controllable strips work very well and look very cool
+- Can be integrated to flash a color when edge is detected
 
-# Other Resources/Examples
-One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
-- [Example 1](https://trashytuber.github.io/YimingJiaBlueStamp/)
-- [Example 2](https://sviatil0.github.io/Sviatoslav_BSE/)
-- [Example 3](https://arneshkumar.github.io/arneshbluestamp/)
+3. Any other information gathering sensor(temperature, humidity, light) + LCD screen
+- Allows a student to integrate two new peices
+- LCD can display the information from sensor
 
-To watch the BSE tutorial on how to create a portfolio, click here.
+4. CAD design a chassis (personal favorite)
+- Allows a student to learn CAD and understand 3D printing
+- Could be a challenge depending on availability of 3D printers and how fast the parts get shipped to the student
+
